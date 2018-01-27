@@ -14,7 +14,7 @@ $( document ).ready(function() {
 			var b = $("<button>");
 			b.addClass("gif");
 			b.attr("data-category", gifs[i]);
-			a.text(gifs[i]);
+			b.text(gifs[i]);
 			$("#buttons-view").append(b);
 		}
 	}
@@ -23,14 +23,23 @@ $( document ).ready(function() {
 		var category = $(this).attr("data-category");
 
 		// Example queryURL for Giphy API
-		var queryURL = "https://api.giphy.com/v1/gifs/?q=" + category + "&api_key=dc6zaTOxFJmzC";
+		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + category + "&api_key=TUu2q2GxPfNGgXmLij3pBQ2SBAoMImOk&limit=10";
 
 		$.ajax({
 			url: queryURL,
-			method: 'GET'
+			method: "GET"
 		}).done(function(response) {
 			console.log(response);
-			// console.log(response.data[0].images.fixed_height.url)
+
+			for(i = 0; i < response.data.length; i++) {
+
+				var rating = response.data[i].rating;
+				var still = response.data[i].images.fixed_height_still;
+				var animate = response.data[i].images.fixed_height;
+				
+
+				// console.log(response.data[0].images.fixed_height.url)
+			}
 		});
 	}
 
