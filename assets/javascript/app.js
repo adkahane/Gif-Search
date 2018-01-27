@@ -12,7 +12,7 @@ $( document ).ready(function() {
 
 		for (var i = 0; i < gifs.length; i++) {
 			var b = $("<button>");
-			b.addClass("gif");
+			b.addClass("cat");
 			b.attr("data-category", gifs[i]);
 			b.text(gifs[i]);
 			$("#buttons-view").append(b);
@@ -36,7 +36,7 @@ $( document ).ready(function() {
 				var rating = response.data[i].rating;
 				var still = response.data[i].images.fixed_height_still;
 				var animate = response.data[i].images.fixed_height;
-				
+
 
 				// console.log(response.data[0].images.fixed_height.url)
 			}
@@ -52,7 +52,7 @@ $( document ).ready(function() {
 	});
 
 	// Call displayGifs function when buttons are clicked
-	$(document).on("click", ".gif", displayGifs);
+	$(document).on("click", ".cat", displayGifs);
 
 	renderButtons();
 });
