@@ -26,7 +26,7 @@ $( document ).ready(function() {
 		$("#gif-view").empty();
 
 		var category = $(this).attr("data-category");
-		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + category + "&api_key=TUu2q2GxPfNGgXmLij3pBQ2SBAoMImOk&limit=15";
+		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + category + "&api_key=TUu2q2GxPfNGgXmLij3pBQ2SBAoMImOk&limit=10";
 
 		$.ajax({
 			url: queryURL,
@@ -63,8 +63,10 @@ $( document ).ready(function() {
 	$("#add-gif").on("click", function(event) {
 		event.preventDefault();
 		var category = $("#gif-input").val().trim();
-		gifs.push(category);
-		renderButtons();
+		if (category !== "" && gifs.indexOf(category) === -1) {
+			gifs.push(category);
+			renderButtons();
+		}
 	});
 
 	// Call displayGifs function when buttons are clicked
