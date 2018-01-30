@@ -5,22 +5,23 @@
   <meta charset="utf-8">
   <title>Giphy API Search</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
   <div class="container">
     <div class="row">
-      <h1>Gif Search</h1>
+      <h1 class="text-white">Gif Search</h1>
     </div>
-    <div class="row">
+    <div class="row mt-3">
       <div id="buttons-view"></div>
     </div>
-    <div class="row">
-      <div class="card ml-auto bg-info">
+    <div class="row my-3">
+      <div class="card bg-info mr-5">
         <div class="card-body">
           <form id="gif-form">
             <div class="form-group">
-            <label for="gif-input">What kind of Gif are you looking for?</label>
+            <label for="gif-input"><h3>What kind of Gif are you looking for?</h3></label>
             <input type="text" class="form-control" id="gif-input"><br>
             <input id="add-gif" type="submit" value="Add a category Please">
             </div>    
@@ -28,7 +29,13 @@
         </div>
       </div>
     </div>
-    <div id="gif-view"></div>
+    <div class="row">
+      <div class="row">
+        <div class="col-11-lg col-7">
+          <div id="gif-view"></div>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="assets/javascript/app.js"></script>
