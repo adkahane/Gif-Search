@@ -25,7 +25,7 @@ $( document ).ready(function() {
 		$("#gif-view").empty();
 
 		var category = $(this).attr("data-category");
-		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + category + "&api_key=TUu2q2GxPfNGgXmLij3pBQ2SBAoMImOk&limit=10";
+		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + category + "&api_key=TUu2q2GxPfNGgXmLij3pBQ2SBAoMImOk&limit=5";
 
 		$.ajax({
 			url: queryURL,
