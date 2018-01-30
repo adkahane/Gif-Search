@@ -12,7 +12,7 @@ $( document ).ready(function() {
 		$("#buttons-view").empty();
 
 		for (var i = 0; i < gifs.length; i++) {
-			var b = $("<button>");
+			var b = $("<button class='btn btn-info mx-1'>");
 			b.addClass("cat");
 			b.attr("data-category", gifs[i]);
 			b.text(gifs[i]);
