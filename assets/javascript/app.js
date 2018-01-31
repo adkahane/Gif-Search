@@ -2,7 +2,7 @@ $( document ).ready(function() {
 
 	// Global Variables
 
-	var gifs = ["skateboarding", "hair metal", "mma", "overwatch", "gaming"];
+	var gifs = ["cats", "bats", "ducks", "karate"];
 
 
 	// FUNCTIONS
@@ -12,10 +12,10 @@ $( document ).ready(function() {
 		$("#buttons-view").empty();
 
 		for (var i = 0; i < gifs.length; i++) {
-			var b = $("<button class='btn btn-info mx-1'>");
+			var b = $("<button class='col-auto btn btn-info mx-1 my-2'>");
 			b.addClass("cat");
 			b.attr("data-category", gifs[i]);
-			b.text(gifs[i]);
+			b.html("<h2>" + gifs[i]) + "</h2>";
 			$("#buttons-view").append(b);
 			$("#gif-input").val('');
 		}
@@ -59,7 +59,7 @@ $( document ).ready(function() {
 		}
 	}
 
-	// Adds category button from user input form
+	// Adds category button from user input form as long as it has not been used before
 	$("#add-gif").on("click", function(event) {
 		event.preventDefault();
 		var category = $("#gif-input").val().trim();
