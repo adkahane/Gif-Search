@@ -36,7 +36,7 @@ $( document ).ready(function() {
 				var rating = response.data[i].rating;
 				var still = response.data[i].images.fixed_height_still.url
 				var animate = response.data[i].images.fixed_height.url;
-				var newGif = $("<img>");
+				var newGif = $("<img class='col-6'><p>Rating: " + rating + "</p>");
 				newGif.addClass("gif");
 				newGif.attr("src", still);
 				newGif.attr("data-state", "still");
